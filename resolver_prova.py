@@ -19,7 +19,7 @@ Questões de 01 a 05 (opção inglês ou espanhol)
 
 questoes = 180
 
-gabarito_filename = "../gabaritos/gabarito_unificado_azul.json"
+gabarito_filename = "gabaritos/gabarito_unificado_azul.json"
 
 modelo = "gpt-3.5-turbo-1106"
 modelo = "gpt-4-1106-preview"
