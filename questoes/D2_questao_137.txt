@@ -1,0 +1,14 @@
+QUESTÃO 137 
+Os	100	funcionários	 de	uma	empresa	 estão	
+distribuídos	 em	dois	setores:	 Produção	 e	Administração.	
+Os funcionários de um mesmo setor recebem salários 
+com valores iguais. O quadro apresenta a quantidade de 
+funcionários por setor e seus respectivos salários.
+(Ver imagem)
+A média dos salários dos 100 funcionários dessa 
+empresa, em real, é
+A A 2 000,00.
+B B 2 500,00.
+C C 3 250,00.
+D D 4 500,00.
+E E 9 000,00.

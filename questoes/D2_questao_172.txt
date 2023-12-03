@@ -1,0 +1,29 @@
+QUESTÃO 172 
+Sejam a, b e c as medidas dos lados de um triângulo 
+retângulo, tendo a  como medida da hipotenusa. Esses 
+valores a, b e c	são,	respectivamente,	 os	diâmetros	 dos	
+círculos C1, C2 e C3,	como	apresentados	na	figura.
+(ver imagem)
+Observe 	que	essa	construção 	assegura,	 pelo	teorema	
+de Pitágoras, que área ( C1) = área ( C2) + área ( C3).
+Um professor de matemática era conhecedor dessa 
+construção	 e,	confraternizando	 com	dois	amigos	em	uma	
+pizzaria	onde	são	vendidas 	pizzas	somente 	em	formato	
+de círculo, lançou um desafio: mesmo sem usar um 
+instrumento	 de	medição,	 poderia	afirmar	com	certeza	se	
+a área do círculo correspondente à pizza que ele pedisse 
+era maior, igual ou menor do que a soma das áreas das 
+pizzas dos dois amigos. Assim, foram pedidas três pizzas. 
+O professor as dividiu ao meio e formou um triângulo com 
+os	diâmetros	das	pizzas,	conforme	indicado	na	figura.
+(ver imagem)
+A partir da medida do ângulo a,	o	professor	 afirmou	
+que a área de sua pizza é maior do que a soma das áreas 
+das outras duas pizzas.
+A área da pizza do professor de matemática é maior do 
+que a soma das áreas das outras duas pizzas, pois
+A A 0° < a < 90°
+B B a = 90°
+C C 90° < a < 180°
+D D a = 180°
+E E 180° < a < 360°

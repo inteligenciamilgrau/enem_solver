@@ -1,0 +1,15 @@
+QUESTÃO 166 
+Uma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte 
+de	seu	programa	 de	emagrecimento.	 Essas	atividades	 são	praticadas	 semanalmente	 de	acordo	com	o	quadro,	que	
+apresenta o número de horas diárias por atividade.
+(ver imagem)
+Ela deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades 
+físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) 
+são	os	seguintes:
+(ver imagem)
+O dia da semana em que será comemorado o aniversário é
+A A segunda-feira.
+B B terça-feira.
+C C quarta-feira.
+D D quinta-feira.
+E E sexta-feira.

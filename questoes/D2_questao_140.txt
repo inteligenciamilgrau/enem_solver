@@ -1,0 +1,13 @@
+QUESTÃO 140 
+Uma empresa de transporte faz regularmente um levantamento do número de viagens realizadas durante o dia 
+por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um 
+gráfico	de	barras,	no	qual	se	relacionaram	 a	quantidade	 de	motoristas	 com	a	quantidade	 de	viagens	 realizadas	 até	
+aquele instante do dia.
+(ver imagem)
+Comparando 	os	valores	da	média,	da	mediana 	e	da	moda	da	distribuição 	das	quantidades 	de	viagens	realizadas 	
+pelos	motoristas	cadastrados	nessa	empresa,	obtém-se
+A A mediana = média < moda.
+B B mediana = moda < média.
+C C mediana < média < moda.
+D D moda < média < mediana.
+E E moda < mediana < média.

@@ -1,0 +1,15 @@
+QUESTÃO 151 
+Um investidor iniciante observou o gráfico que 
+apresenta	 a	evolução	 dos	valores	de	duas	criptomoedas	
+A	e	B	em	relação	ao	tempo.
+(ver imagem)
+Durante horas consecutivas, esses valores foram 
+observados em nove instantes, representados por horas 
+exatas.
+Em quantos desses instantes a criptomoeda A estava 
+mais	valorizada	do	que	a	criptomoeda	B?
+A A 3
+B B 4
+C C 6
+D D 7
+E E 9

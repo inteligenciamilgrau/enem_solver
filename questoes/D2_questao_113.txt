@@ -1,0 +1,15 @@
+QUESTÃO 113 
+O bluetooth 	é	uma	tecnologia	 de	comunicação	 sem	fio,	de	curto	alcance,	 presente	 em	diferentes	 dispositivos 	
+eletrônicos de consumo. Ela permite que aparelhos eletrônicos diferentes se conectem e troquem dados entre 
+si.	No	padrão	 bluetooth , denominado de Classe 2, as antenas transmitem sinais de potência igual a 2,4 mW e 
+possibilitam conectar dois dispositivos distanciados até 10 m. Considere que essas antenas se comportam como 
+fontes puntiformes que emitem ondas eletromagnéticas esféricas e que a intensidade do sinal é calculada pela 
+potência por unidade de área. Considere 3 como valor aproximado para π.
+Para que o sinal de bluetooth  seja detectado pelas antenas, o valor mínimo de sua intensidade, em W
+m2, é mais 
+próximo de
+A A 2,0 × 10–6.
+B B 2,0 × 10–5.
+C C 2,4 × 10–5.
+D D 2,4 × 10–3.
+E E 2,4 × 10–1.

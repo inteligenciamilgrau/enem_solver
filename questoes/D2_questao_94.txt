@@ -1,0 +1,16 @@
+QUESTÃO 94 
+Em uma indústria, o controle da dureza da água é 
+importante quando ela é utilizada em caldeiras, uma vez 
+que sais pouco solúveis, formados a partir de sulfatos e 
+carbonatos,	 podem	acumular-se	 no	interior	das	tubulações, 	
+causando obstruções. Para avaliar a água utilizada nessa 
+indústria, foram realizados testes de qualidade que 
+consideraram os seguintes parâmetros:
+(ver imagem)
+Qual teste deve ser considerado para controlar a 
+formação	desse	tipo	de	obstrução	de	tubulações?
+A A 1
+B B 2
+C C 3
+D D 4
+E E 5

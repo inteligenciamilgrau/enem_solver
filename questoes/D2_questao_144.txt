@@ -1,0 +1,16 @@
+QUESTÃO 144 
+A	foto	mostra	a	construção	 de	uma	cisterna	destinada 	
+ao armazenamento de água. Uma cisterna como essa, na 
+forma de cilindro circular reto com 3 m² de área da base, 
+foi	abastecida	 por	um	curso-d’água	 com	vazão	constante. 	
+O seu proprietário registrou a altura do nível da água no 
+interior da cisterna durante o abastecimento em diferentes 
+momentos de um mesmo dia, conforme o quadro.
+(ver imagem)
+Qual	foi	a	vazão,	em	metro	cúbico	por	hora,	do	
+curso-d’água	que	abasteceu	a	cisterna?
+A A 0,3
+B B 0,5
+C C 0,9
+D D 1,8
+E E 2,7

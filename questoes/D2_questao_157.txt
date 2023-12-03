@@ -1,0 +1,20 @@
+QUESTÃO 157 
+Um professor, para promover a aprendizagem dos 
+estudantes em estatística, propôs uma atividade. O objetivo 
+era	verificar	o	percentual 	de	estudantes	 com	massa	corporal	
+abaixo da média e altura acima da média de um grupo de 
+estudantes. Para isso, usando uma balança e uma fita 
+métrica, avaliou uma amostra de dez estudantes, anotando as 
+medidas	observadas. 	O	gráfico	apresenta 	a	massa	corporal, 	
+em quilograma, e a altura, em metro, obtidas na atividade.
+(ver imagem)
+Após a coleta dos dados, os estudantes calcularam a 
+média dos valores obtidos, referentes à massa corporal e 
+à altura, obtendo, respectivamente, 80 kg e 1,65 m.
+Qual é o percentual de estudantes dessa amostra com 
+massa	corporal	abaixo	da	média	e	altura	acima	da	média?
+A A 10
+B B 20
+C C 30
+D D 50
+E E 70

@@ -1,0 +1,24 @@
+QUESTÃO 170 
+Analisando as vendas de uma empresa, o gerente 
+concluiu que o montante diário arrecadado, em milhar de real, 
+poderia	ser	calculado 	pela	expressão 	Vxxx /g11/g12/g32/g16 /g142
+410 105, 
+em que os valores de x representam os dias do mês, 
+variando de 1 a 30.
+Um dos fatores para avaliar o desempenho mensal 
+da	empresa	 é	verificar	 qual	é	o	menor	montante	 diário	 V0 
+arrecadado	 ao	longo	do	mês	e	classificar	 o	desempenho	
+conforme as categorias apresentadas a seguir, em que as 
+quantidades	estão	expressas	em	milhar	de	real.
+• Ótimo: V0 ≥ 24
+• Bom: 20 ≤ V0 < 24
+• Normal: 10 ≤ V0 < 20
+• Ruim: 4 ≤ V0 < 10
+• Péssimo: V0 < 4
+No	caso	analisado,	 qual	seria	a	classificação	 do	
+desempenho	da	empresa?
+A A Ótimo.
+B B Bom.
+C C Normal.
+D D Ruim.
+E E Péssimo.

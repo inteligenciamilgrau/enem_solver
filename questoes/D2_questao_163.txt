@@ -1,0 +1,20 @@
+QUESTÃO 163 
+Uma empresa de segurança domiciliar oferece o serviço 
+de patrulha noturna, no qual vigilantes em motocicletas 
+fazem o monitoramento periódico de residências.  
+A empresa conta com uma base, de onde acompanha 
+o trajeto realizado pelos vigilantes durante as patrulhas 
+e orienta o deslocamento de equipes de reforço quando 
+necessário. Numa patrulha rotineira, sem ocorrências, 
+um vigilante conduziu sua motocicleta a uma velocidade 
+constante durante todo o itinerário estabelecido, levando 
+30	minutos	 para	conclusão.	 De	acordo	com	os	registros	
+do	GPS	alocado	 na	motocicleta, 	a	distância	 da	posição	
+do	vigilante	 à	base,	ao	longo	do	tempo	de	realização	 do	
+trajeto,	é	descrita	pelo	gráfico.
+(ver imagem)
+A vista superior da trajetória realizada pelo vigilante 
+durante	 a	patrulha	 registrada	 no	gráfico	é	descrita	 pela	
+representação:
+
+As alternativas desta questão com os gráficos estão na imagem.

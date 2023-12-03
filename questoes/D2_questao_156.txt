@@ -1,0 +1,14 @@
+QUESTÃO 156
+Uma pessoa caminha por 30 minutos e utiliza um
+aplicativo instalado em seu celular para monitorar a
+variação 	da	intensidade 	do	sinal	de	internet	recebido
+pelo aparelho durante o deslocamento. Chegando ao seu
+destino,	o	aplicativo	forneceu	este	gráfico:
+(ver imagem)
+Por quantos minutos, durante essa caminhada, o celular
+dessa	pessoa	ficou	sem	receber	sinal	de	internet?
+A A 6
+B B 8
+C C 10
+D D 14
+E E 24

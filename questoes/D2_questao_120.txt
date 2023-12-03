@@ -1,0 +1,18 @@
+QUESTÃO 120 
+O circuito com três lâmpadas incandescentes idênticas, 
+representado	 na	figura,	consiste	 em	uma	associação	 mista	
+de resistores. Cada lâmpada ( L1, L2 e L3) é associada,
+em paralelo, a um resistor de resistência R , formando um 
+conjunto.	 Esses	conjuntos	 são	associados	 em	série,	tendo	
+todas as lâmpadas o mesmo brilho quando ligadas à fonte 
+de energia. Após vários dias em uso, apenas a lâmpada L2 
+queima, enquanto as demais permanecem acesas.
+(ver imagem)
+Em	relação	à	situação 	em	que	todas	as	lâmpadas 	
+funcionam, após a queima de L2, os brilhos das 
+lâmpadas 	serão
+A A os mesmos.
+B B mais intensos.
+C C menos intensos.
+D D menos intenso para L1 e o mesmo para L3.
+E E mais intenso para L1 e menos intenso para L3.

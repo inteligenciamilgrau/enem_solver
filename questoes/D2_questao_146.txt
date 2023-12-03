@@ -1,0 +1,37 @@
+QUESTÃO 146 
+O	triângulo 	da	figura	é	denominado 	triângulo 	mágico.	
+Nos	círculos,	 escrevem-se	 os	números	 de	1	a	6,	sem	
+repetição,	 com	um	número	em	cada	círculo.	O	objetivo	
+é distribuir os números de forma que as somas dos 
+números em cada lado do triângulo sejam iguais.
+(ver imagem)
+Considere que os números colocados nos vértices 
+do	triângulo	 estejam	 em	progressão	 aritmética	 de	razão	
+igual a 2.
+Nas condições propostas, quais as possíveis soluções 
+para as somas dos números que formam os lados do 
+triângulo?
+A A Há	somente	 uma	solução	 possível,	 e	as	somas	em	
+cada	lado	do	triângulo	são	iguais	a	7.
+B B Há	somente	 uma	solução	 possível,	 e	as	somas	em	
+cada	lado	do	triângulo	são	iguais	a	9.
+C C Há somente duas soluções possíveis, uma em que 
+as	somas	em	cada	lado	do	triângulo	 são	iguais	a	7	e	
+outra	em	que	as	somas	são	iguais	a	9.
+D D Há somente duas soluções possíveis, uma em que 
+as	somas	em	cada	lado	do	triângulo	 são	iguais	a	9	e	
+outra	em	que	as	somas	são	iguais	a	12.
+E E Há somente duas soluções possíveis, uma em que 
+as	somas	em	cada	lado	do	triângulo	 são	iguais	a	10	
+e	outra	em	que	as	somas	são	iguais	a	11.*020325AZ19*=================== Content on page:20===================
+20
+MT • 2 º DIA • CADERNO 7 • AZULA	opção	a	ser	escolhida	 é	aquela	em	que	a	medida	
+dos cabos seja a menor possível.
+Qual será a medida, em metro, de cada um dos cabos a 
+serem	instalados?
+A A  223
+3
+B B  112
+C C  122
+D D  123
+E E  22

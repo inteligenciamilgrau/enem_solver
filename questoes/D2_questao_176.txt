@@ -1,0 +1,13 @@
+QUESTÃO 176 
+Os	números	 figurados	 pentagonais	 provavelmente 	
+foram introduzidos pelos pitagóricos por volta do 
+século	V	a.C.	As	figuras	ilustram	 como	obter	os	seis	
+primeiros deles, sendo os demais obtidos seguindo o 
+mesmo	padrão	geométrico.
+(ver imagem)
+O oitavo número pentagonal é 
+A A 59.
+B B 83.
+C C 86.
+D D 89.
+E E 92.

@@ -1,0 +1,20 @@
+QUESTÃO 169 
+O esquema mostra como a intensidade luminosa 
+decresce com o aumento da profundidade em um rio, 
+sendo L0 a intensidade na sua superfície.
+0 m L0
+1 m
+32L0
+2 m
+94L0
+3 m
+278L0Intensidade luminosa Profundidade
+Considere que a intensidade luminosa diminui, a cada 
+metro acrescido na profundidade, segundo o mesmo 
+padrão	do	esquema.A intensidade luminosa correspondente à profundidade 
+de 6 m é igual a
+A A  1/9L 0
+B B  16/27L 0
+C C  32/243L 0
+D D  64/729L 0
+E E  128/2187 0L

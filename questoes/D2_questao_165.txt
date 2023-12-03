@@ -1,0 +1,10 @@
+QUESTÃO 165 
+A figura representa uma	escada com três degraus, construída em concreto maciço,	com suas medidas especificadas.
+(ver imagem)
+Nessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.
+A área a ser revestida em cerâmica, em metro quadrado, mede
+A A 1,20.
+B B 1,35.
+C C 1,65.
+D D 1,80.
+E E 1,95.
