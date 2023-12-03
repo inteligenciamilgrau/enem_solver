@@ -1,0 +1,15 @@
+QUESTÃO 89 
+Simulação de mudança da temperatura média anual em relação ao período pré-industrial em três cenários de aquecimento global
+Simulação de mudança da pluviosidade média anual em relação ao período pré-industrial em três cenários de aquecimento global1,5 °C  de aquecimento global 2 °C  de aquecimento global 4 °C  de aquecimento global
+1,5 °C  de aquecimento global 2 °C  de aquecimento globalVariação (°C)
+Mais seco Mais úmidoMais quente
+Variação (%)4 °C  de aquecimento global0
+-40 -30 -20 -10 0 10 20 30 40
+Fonte: IPCC0,5 11,5 22,5 33,5 44,5 55,5 66,5 7
+PIVETTA, M. O clima no Antropoceno. Revista Pesquisa Fapesp ,	n.	307,	set.	2021.
+Qual medida é capaz de minimizar as mudanças apresentadas nas simulações?
+A A Expandir o transporte marítimo.
+B B Incentivar	os	fluxos	migratórios.
+C C Monitorar as atividades vulcânicas.
+D D Controlar as emissões de carbono.
+E E Priorizar a utilização de termoelétricas.
