@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENEM no Inteligência Mil Grau</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="file"] {
+            margin-right: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2, h3, h4 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ENEM no Inteligência Mil Grau</h1>
+
+    <form method="post" action="/" enctype="multipart/form-data">
+        <label for="file">Arquivo de Respostas:</label>
+        <input type="file" id="file" name="file" accept=".json" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if data %}
+    <h2>Avaliação</h2>
+    <table border="1">
+        <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Modelo</td>
+            <td>{{ data.avaliacao[0].modelo }}</td>
+        </tr>
+        <tr>
+            <td>Modelo de Visao</td>
+            <td>{{ data.avaliacao[0]["modelo visao"] }}</td>
+        </tr>
+        <tr>
+            <td>Tempo de Prova</td>
+            <td>{{ data.avaliacao[0]["tempo decorrido"][0].horas }}h
+            {{ data.avaliacao[0]["tempo decorrido"][0].minutos }}m
+            {{ data.avaliacao[0]["tempo decorrido"][0].segundos }}s</td>
+        </tr>
+        <tr>
+            <td>Acertos</td>
+            <td>{{ data.avaliacao[0].acertos }} de {{ data.avaliacao[0]["total de questoes"] }} questões
+                - {{ data.avaliacao[0]["percentual de acertos"] }}%</td>
+        </tr>
+        <tr>
+            <td>Linguagens</td>
+            <td>{{ data.avaliacao[1].linguagens[0].acertos }} de 45 questões -
+                {{ data.avaliacao[1].linguagens[0].percentual }}%</td>
+        </tr>
+        <tr>
+            <td>Humanas</td>
+            <td>{{ data.avaliacao[2].humanas[0].acertos }} de 45 questões -
+                {{ data.avaliacao[2].humanas[0].percentual }}%</td>
+        </tr>
+        <tr>
+            <td>Natureza</td>
+            <td>{{ data.avaliacao[3].natureza[0].acertos }} de 45 questões -
+                {{ data.avaliacao[3].natureza[0].percentual }}%</td>
+        </tr>
+        <tr>
+            <td>Matemática</td>
+            <td>{{ data.avaliacao[4].matematica[0].acertos }} de 45 questões -
+                {{ data.avaliacao[4].matematica[0].percentual }}%</td>
+        </tr>
+        <tr>
+            <td>Criatividade</td>
+            <td>{{ data.avaliacao[0].temperatura }}</td>
+        </tr>
+        <tr>
+            <td>Falhas</td>
+            <td>{{ data.avaliacao[0].falhas }}</td>
+        </tr>
+        <tr>
+            <td>Falhas (Visão)</td>
+            <td>{{ data.avaliacao[0].falhas_visao }}</td>
+        </tr>
+        <tr>
+            <td>Sem Resposta</td>
+            <td>{{ data.avaliacao[0].sem_resposta }}</td>
+        </tr>
+        <tr>
+            <td>Acertos Ponderados</td>
+            <td>{{ data.avaliacao[0]["acertos ponderados"] }}%</td>
+        </tr>
+        <tr>
+            <td>Arquivo</td>
+            <td>{{ data.avaliacao[0].nome_arquivo }}</td>
+        </tr>
+    </table>
+    <!-- Add more information as needed -->
+
+    <h2>Prova</h2>
+    {% for question, details in data.prova.items() %}
+        <h3>{{ question }}</h3>
+        {% if details %}
+            <h4>Pergunta</h4>
+            <p>{{ details[0].Pergunta }}</p>
+            <h4>Resposta</h4>
+            <p>{{ details[1].Resposta }}</p>
+            <h4>Gabarito</h4>
+            <p>{{ details[2].Gabarito }}</p>
+            <h4>Alternativa Escolhida</h4>
+            <p>{{ details[3].Respondida }}</p>
+            {% if details[4]["Avaliacao Parcial"] %}
+                <h4>Avaliação Parcial</h4>
+                <table border="1">
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                    <tr>
+                        <td>Acertos</td>
+                        <td>{{ details[4]["Avaliacao Parcial"][0]["acertos"] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Questões</td>
+                        <td>{{ details[4]["Avaliacao Parcial"][0]["questoes"] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Acertos Ponderados</td>
+                        <td>{{ details[4]["Avaliacao Parcial"][0]["acertos ponderados"] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Percentual de Acertos</td>
+                        <td>{{ details[4]["Avaliacao Parcial"][0]["percentual de acertos"] }}</td>
+                    </tr>
+                </table>
+            {% endif %}
+        <!-- Add more information as needed -->
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+
+</body>
+</html>

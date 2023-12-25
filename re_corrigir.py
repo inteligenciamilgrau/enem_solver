@@ -1,6 +1,6 @@
 import json
 
-filename = 'resolucao_2023_11_29_17_03.json'
+filename = 'resolucao_gpt-4-1106-preview_pts_082_2023_11_30_10_35_corrigido.json'
 
 # Leitura do arquivo JSON
 with open(filename, 'r', encoding='utf-8') as file:
