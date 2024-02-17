@@ -21,25 +21,51 @@ Questões de 01 a 05 (opção inglês ou espanhol)
 '''
 
 questoes = 180
+seed = 42
 selecionar_questoes = []
 
 gabarito_filename = "./gabaritos/gabarito_unificado_azul.json"
 
-modelo_gpt = "gpt-3.5-turbo-1106"
-#modelo_gpt = "gpt-4-1106-preview"
+# modelo_gpt = "gpt-3.5-turbo"
+modelo_gpt = "gpt-4-turbo-preview"
+# modelo_gpt = "gpt-4-1106-preview"
 modelo_visao_gpt = "gpt-4-vision-preview"
 
-modelo_gemini = "gemini-pro"
-modelo_visao_gemini = "gemini-pro-vision"
+# modelo_gemini = "gemini-pro"
+modelo_gemini = "gemini-1.0-pro-latest"
+# modelo_visao_gemini = "gemini-pro-vision"
+modelo_visao_gemini = "gemini-1.0-pro-vision-latest"
 
 modelo = modelo_gemini
 modelo_visao = modelo_visao_gemini
+# modelo = modelo_gpt
+# modelo_visao = modelo_visao_gpt
 
-temperatura = 1.0
+temperatura = 0.1
 
-instrucoes = """
+instrucoes1 = """
     Explique passo a passo a questão e depois diga a alternativa correta 
     da questão em formato json como no exemplo { "questao 03": "B" }:"""
+
+instrucoes2 = """
+    Você deve ler a questão apresentada e suas alternativas.
+    Imagine que para essa resolução você trará 3 possíveis soluções diferentes.
+    Avalie as 3 soluções baseando-se em raciocínio lógico e explique cada uma delas e elimine as 2 soluções mais mal avaliadas, deixando apenas a solução que mais faça sentido.
+    Encontre a alternativa que corresponde à resposta escolhida.
+    Depois diga a alternativa correta da questão em formato json como no exemplo { "questao 03": "B" }:"""
+
+instrucoes = instrucoes1
+
+# prompt do modelo de visao
+
+pergunta1 = """
+                Com o auxilio da imagem explique passo a passo a questão e depois diga a alternativa correta 
+                da questão em formato json como no exemplo {'questao 03': 'B'}.\n"""
+
+pergunta2 = instrucoes
+
+pergunta = pergunta1
+
 
 comecou = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')
 
@@ -85,6 +111,7 @@ def perguntar_ao_chat(messages, model, temperature):
                 messages=[{"role": "system", "content": instrucoes},
                           {"role": "user", "content": messages}],
                 temperature=temperature,
+                seed=seed,
             )
 
             return response.choices[0].message.content
@@ -107,10 +134,7 @@ def encode_image(image_path):
 
 
 def perguntar_ao_chat_com_imagem(question_content_img, image_file, model_vision):
-    global falhas_visao
-    pergunta = """
-                Com o auxilio da imagem explique passo a passo a questão e depois diga a alternativa correta 
-                da questão em formato json como no exemplo {'questao 03': 'B'}.\n"""
+    global falhas_visao, instrucoes, pergunta
 
     pergunta = pergunta + question_content_img
 
@@ -154,7 +178,8 @@ def perguntar_ao_chat_com_imagem(question_content_img, image_file, model_vision)
                     ]
                 }
             ],
-            "max_tokens": 4_000
+            "max_tokens": 4_000,
+            "seed": seed
         }
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
@@ -176,6 +201,7 @@ print(assistente_intro)
 print('#' * len(assistente_intro))
 print("Modelo de Linguagem:", modelo)
 print("Modelo de Visão:", modelo_visao)
+print("Seed", seed)
 
 # Iterate through 45 questions
 # for question_number in range(1, questoes + 1):
@@ -213,6 +239,7 @@ for question_number in number_list:
         print("")
         print(60 * "#")
         print("Resposta do Chat:")
+        print(60 * "#")
         print(resp)
         print(40 * "=")
 
@@ -308,7 +335,7 @@ total_de_falhas = erros_e_falhas if erros_e_falhas >= 0 else 0
 # print("questoes", questoes, total_de_falhas, erros_e_falhas)
 acertos_ponderados = int(acertos / (questoes - total_de_falhas) * 100) if questoes > total_de_falhas else 0
 
-output_text_file = f"resolucao_{modelo}_pts_{acertos_ponderados:03d}_{comecou}_tot_{questoes}.json"
+output_text_file = f"resolucao_{modelo}_pts_{acertos_ponderados:03d}_{comecou}_tot_{questoes}_seed_{seed}_temp_{int(temperatura*10)}.json"
 
 with open(output_text_file, 'a', encoding='utf-8') as text_file:
     json.dump({"avaliacao": [
