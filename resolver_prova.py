@@ -8,9 +8,13 @@ import datetime
 import requests
 import base64
 import PIL.Image
+import anthropic
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-openai.api_key = "SUA_API_KEY_OPENAI"
-GEMINI_API = "SUA_API_KEY_GEMINI"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+GEMINI_API = os.environ.get("GEMINI_API")
 
 '''
 questões de número 01 a 45, relativas à área de Linguagens, Códigos e suas Tecnologias;
@@ -36,8 +40,11 @@ modelo_gemini = "gemini-1.0-pro-latest"
 # modelo_visao_gemini = "gemini-pro-vision"
 modelo_visao_gemini = "gemini-1.0-pro-vision-latest"
 
-modelo = modelo_gemini
-modelo_visao = modelo_visao_gemini
+modelo_claude = "claude-3-opus-20240229"  # "claude-3-sonnet-20240229"
+modelo_visao_claude = "claude-3-opus-20240229"  # "claude-3-sonnet-20240229"
+
+modelo = modelo_claude
+modelo_visao = modelo_visao_claude
 # modelo = modelo_gpt
 # modelo_visao = modelo_visao_gpt
 
@@ -73,6 +80,13 @@ if "gemini" in modelo:
     genai.configure(api_key=GEMINI_API)
     modelo_gemini = genai.GenerativeModel('gemini-pro')
     modelo_gemini_vision = genai.GenerativeModel('gemini-pro-vision')
+elif "claude" in modelo:
+    client = anthropic.Anthropic(
+        # defaults to os.environ.get("ANTHROPIC_API_KEY")
+        api_key=os.environ.get("ANTHROPIC_API_KEY"),
+    )
+    modelo_gemini = genai.GenerativeModel('gemini-pro')
+    modelo_gemini_vision = genai.GenerativeModel('gemini-pro-vision')
 
 # Record the start time
 start_time = time.time()
@@ -104,6 +118,27 @@ def perguntar_ao_chat(messages, model, temperature):
                   response.prompt_feedback.safety_ratings)
             falhas += 1
             return "{ 'questao 00': 'Erro: " + str(e) + "' }"
+    elif "claude" in model:
+        try:
+            msg = client.messages.create(
+                # model="claude-3-opus-20240229",
+                model=model,
+                # model="claude-3-haiku-20240229",
+                max_tokens=4096,
+                temperature=temperature,
+                system=instrucoes,
+                messages=[
+                    {"role": "user", "content": messages}
+                ]
+            )
+            response = msg.content[0].dict()['text']
+
+            return response
+        except Exception as e:
+            print("Erro no Claude", e)
+
+            falhas += 1
+            return "{ 'questao claude': 'Erro: " + str(e) + "' }"
     elif "gpt" in model:
         try:
             response = openai.chat.completions.create(
@@ -117,6 +152,7 @@ def perguntar_ao_chat(messages, model, temperature):
             return response.choices[0].message.content
         except Exception as e:
             print("Erro", e)
+            falhas += 1
             return e
 
 
@@ -146,6 +182,45 @@ def perguntar_ao_chat_com_imagem(question_content_img, image_file, model_vision)
             return response.text
         except Exception as e:
             print("Erro no Gemini Vision: ", e)
+            #print("Feedback", response.prompt_feedback, response.prompt_feedback.block_reason,
+            #      response.prompt_feedback.safety_ratings)
+            falhas_visao += 1
+            return "{ 'questao 00': 'Erro: " + str(e) + "' }"
+    elif "claude" in model_vision:
+        try:
+            with open(image_file, "rb") as image_fl:
+                image_data = image_fl.read()
+                img = base64.b64encode(image_data).decode('utf-8')
+
+            message = client.messages.create(
+                # model="claude-3-opus-20240229",
+                model="claude-3-sonnet-20240229",
+                max_tokens=4096,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": "image/png",
+                                    "data": img,
+                                },
+                            },
+                            {
+                                "type": "text",
+                                "text": pergunta
+                            }
+                        ],
+                    }
+                ],
+            )
+
+            response = message.dict()['content'][0]['text']
+            return response
+        except Exception as e:
+            print("Erro no Claude Vision: ", e)
             #print("Feedback", response.prompt_feedback, response.prompt_feedback.block_reason,
             #      response.prompt_feedback.safety_ratings)
             falhas_visao += 1
@@ -221,6 +296,11 @@ for question_number in number_list:
     # Read and print the content of the file
     with open(filename, 'r', encoding='utf-8') as file:
         question_content = file.read()
+
+        if "claude" in modelo:
+            print("Aguardando...")
+            time.sleep(20)  # delay para evitar o rate de 5 mensagens por minuto do plano free do Claude
+            print("Foi...")
 
         print(60 * "#")
         if image_exists:
